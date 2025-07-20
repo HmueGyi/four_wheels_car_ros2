@@ -19,7 +19,7 @@ diff_cont:
     right_wheel_names: ['right_front_wheel_joint', 'right_rear_wheel_joint']
 
     wheel_separation: 1.5         # Adjust based on your robot width (meters)
-    wheel_radius: 0.1             # Adjust based on your wheel radius (meters)
+    wheel_radius: 0.05             # Adjust based on your wheel radius (meters)
 
     use_stamped_vel: false
     open_loop: true               # Set to true if you don't have wheel encoders simulated

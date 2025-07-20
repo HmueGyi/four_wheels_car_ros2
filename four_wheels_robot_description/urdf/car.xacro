@@ -49,6 +49,34 @@
     </inertial>
   </link>
 
+    <!-- Lidar -->
+    <link name="lidar">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <sphere radius="0.02"/>
+        </geometry>
+        <material name="LidarGlass"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <sphere radius="0.02"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.1"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0.000005" ixy="0" ixz="0" iyy="0.000005" iyz="0" izz="0.000005"/>
+      </inertial>
+    </link>
+  
+    <joint name="lidar_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="lidar"/>
+      <origin xyz="0 0 ${base_h + 0.02}" rpy="0 0 0"/>
+    </joint>
+
   <!-- Left Front Wheel -->
   <link name="left_front_wheel">
     <visual>
