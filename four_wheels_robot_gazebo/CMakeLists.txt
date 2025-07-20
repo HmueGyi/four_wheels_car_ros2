@@ -23,7 +23,6 @@ endif()
 
 install(DIRECTORY                   
   launch
-  rviz
   config
   worlds
   DESTINATION share/${PROJECT_NAME})
